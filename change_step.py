@@ -96,7 +96,7 @@ class Step:
 
     def run(self):
         for phone, pwd in self.user_info.items():
-            self.set_step(*(self.get_id_token(phone, pwd)), random.randint(7000, 15000))
+            self.set_step(*(self.get_id_token(phone, pwd)), random.randint(8000, 15000))
             time.sleep(2)
             # jobs = [gevent.spawn(self.set_step, *(self.get_id_token(phone, pwd)), random.randint(7000, 15000))]
             # gevent.joinall(jobs)
@@ -104,7 +104,7 @@ class Step:
 
 if __name__ == '__main__':
     # monkey.patch_all()
-    user_info = {"phone": "password",  # add your account here
+    user_info = {"15689830982": "wangHUI123",  # add your account here
                  }
     zqy = Step(user_info)
     zqy.run()
